@@ -55,3 +55,4 @@ data/
 # Misc
 .cache/
 .parcel-cache/
+backend/.env.example
