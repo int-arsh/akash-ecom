@@ -1,0 +1,179 @@
+/* Checkout Form Container */
+.checkout-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.checkout-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Order Summary Section */
+.checkout-summary {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.checkout-summary h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Checkout Items List */
+.checkout-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Individual Checkout Item */
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.checkout-item-name {
+  flex: 1;
+  color: #333;
+}
+
+.checkout-item-qty {
+  color: #666;
+  margin: 0 10px;
+}
+
+.checkout-item-price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Checkout Total */
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.checkout-total-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkout-total-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Form Fields */
+.checkout-form-fields {
+  margin-top: 20px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form Label */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Form Input */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Error state on input */
+.form-input.error {
+  border-color: #ff4444;
+}
+
+/* Error Message */
+.error-message {
+  display: block;
+  color: #ff4444;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Form Action Buttons */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Cancel Button */
+.btn-cancel {
+  flex: 1;
+  padding: 12px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+/* Proceed to Payment Button */
+.btn-payment {
+  flex: 1;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-payment:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+/* Disabled button state */
+.btn-payment:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

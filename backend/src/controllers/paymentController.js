@@ -52,8 +52,8 @@ class PaymentController {
 
       // Build URLs for success and cancel redirects
       const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000';
-      const successUrl = `${frontendUrl}/success?session_id={CHECKOUT_SESSION_ID}`;
-      const cancelUrl = `${frontendUrl}/cancel`;
+      const successUrl = `${frontendUrl}/payment-success?session_id={CHECKOUT_SESSION_ID}`;
+      const cancelUrl = `${frontendUrl}/payment-failed?orderId=${order._id.toString()}`;
 
       // Create Stripe checkout session with order metadata
       const session = await stripeService.createCheckoutSession(
@@ -162,9 +162,10 @@ class PaymentController {
         // Extract order ID from session metadata
         const orderId = session.metadata?.orderId;
 
+        let order;
         if (orderId) {
           // Find and update the order status
-          const order = await Order.findById(orderId);
+          order = await Order.findById(orderId);
 
           if (order) {
             order.paymentStatus = 'success';
@@ -178,6 +179,8 @@ class PaymentController {
           message: 'Payment verified successfully',
           status: 'paid',
           orderId,
+          email: session.customer_email,
+          amount: session.amount_total,
         });
       }
 

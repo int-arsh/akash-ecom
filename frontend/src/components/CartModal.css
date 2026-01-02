@@ -1,0 +1,197 @@
+/* Modal Overlay - Dark background behind modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Modal Content - Main modal box */
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 2001;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+/* Close Button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Modal Body */
+.modal-body {
+  margin-bottom: 20px;
+  min-height: 100px;
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  padding: 40px 20px;
+}
+
+/* Cart Items List */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* Cart Item Image */
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Cart Item Details */
+.cart-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item-name {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.cart-item-price {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Cart Item Total */
+.cart-item-total {
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Remove Button */
+.btn-remove {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.btn-remove:hover {
+  background: #cc0000;
+}
+
+/* Modal Footer */
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+/* Total Amount */
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 0;
+}
+
+.total-label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.total-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Modal Action Buttons */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-continue,
+.btn-checkout {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Continue Shopping Button */
+.btn-continue {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-continue:hover {
+  background: #e0e0e0;
+}
+
+/* Proceed to Checkout Button */
+.btn-checkout {
+  background: #007bff;
+  color: white;
+}
+
+.btn-checkout:hover {
+  background: #0056b3;
+}
